@@ -43,11 +43,11 @@ app.post("/", function(req, res){
 
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us13.api.mailchimp.com/3.0/lists/b2b42feb34";
+  const url = "https://usX.api.mailchimp.com/3.0/lists/$(LISTID)";
 
   const options = {
     method: "POST",
-    auth: "ritvijk:9065418a5e4b56d1985d79612d43a4b5-us13"
+    auth: "ritvijk:$(APIKEY)"
   };
 
 
@@ -70,5 +70,5 @@ app.post("/", function(req, res){
 });
 
 
-// apikey: 9065418a5e4b56d1985d79612d43a4b5-us13
-// listid: b2b42feb34
+// apikey: $(APIKEY)
+// listid: $(LISTID)
